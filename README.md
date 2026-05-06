@@ -1,41 +1,108 @@
-# ❝ Quote Gallery 
 
-A clean, paginated quotes listing app built with **React + TypeScript + Vite**, powered by the [FreeAPI.app](https://freeapi.app) public quotes endpoint.
+# FreeAPI Quotes Listing Application
 
-<img width="1218" height="565" alt="Screenshot (263)" src="https://github.com/user-attachments/assets/4b30e624-7aab-4060-9829-4ee0266c58a2" />
+A simple web application that fetches and displays quotes from a free public API. This project demonstrates how to integrate APIs, handle asynchronous data, and dynamically render content on a web page.
 
+---
 
 ## Features
 
-- Fetches quotes from the FreeAPI public quotes API
-- Displays quotes in a responsive card grid (12 per page)
-- Pagination — navigate through all available quotes
-- Dark, elegant UI with smooth hover animations
-- Loading spinner & error state handling
+* Fetch quotes from a free public API
+* Display quotes dynamically on the UI
+* Show author names along with quotes
+* Refresh or load new quotes
+* Simple and responsive user interface
+* Lightweight and fast
+
+---
 
 ## Tech Stack
 
-- React 19 + TypeScript
-- Vite
-- Pure CSS (no external UI library)
+* Frontend: HTML, CSS, JavaScript
+* API: Free public quotes API (e.g., Quotable API)
+* Tools: VS Code, Git, Browser DevTools
 
-## API
+---
+
+## Project Structure
 
 ```
-GET https://api.freeapi.app/api/v1/public/quotes?page=1&limit=12
+FreeAPI-Quotes-Listing-Application/
+│── index.html
+│── style.css
+│── script.js
+│── README.md
 ```
 
-## Getting Started
+---
 
-```bash
-npm install
-npm run dev
+## Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/FreeAPI-Quotes-Listing-Application.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd FreeAPI-Quotes-Listing-Application
+   ```
+
+3. Open the `index.html` file in your browser
+
+---
+
+## API Integration
+
+Example API used:
+
+```
+https://api.quotable.io/quotes
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+### Fetch Example
 
-## Build
-
-```bash
-npm run build
+```javascript
+fetch('https://api.quotable.io/quotes')
+  .then(response => response.json())
+  .then(data => console.log(data));
 ```
+
+---
+
+## How It Works
+
+1. The application sends a request to the quotes API
+2. The API returns data in JSON format
+3. The application processes the data
+4. Quotes and authors are displayed dynamically on the webpage
+
+---
+
+## Future Improvements
+
+* Add category-based filtering
+* Search quotes by keyword or author
+* Add pagination or infinite scrolling
+* Save favorite quotes locally
+* Improve UI/UX with animations
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a pull request
+
+
+## Acknowledgements
+
+* Public APIs providing free quote data
+* Open-source development community
+
